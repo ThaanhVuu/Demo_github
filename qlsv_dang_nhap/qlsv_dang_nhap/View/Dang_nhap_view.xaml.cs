@@ -52,34 +52,7 @@ namespace qlsv_dang_nhap.View
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            string userInput = txtUser.Text;
-            string passInput = txtPass.Password;
-            if (string.IsNullOrEmpty(userInput) || string.IsNullOrEmpty(passInput))
-            {
-                MessageBox.Show("Vui lòng nhập tên đăng nhập và mật khẩu");
-                return;
-            }
-            try
-            {
-                _user = _userService.Authenticate(userInput, passInput);
-                MessageBox.Show($"Đăng nhập thành công, chào mừng {_user.Username}");
-                if (_user.Role == 1)
-                {
-                    viewAdmin admin = new viewAdmin();
-                    admin.Show();
-                    this.Close();
-                }
-                else
-                {
-                    viewTrang_chinh user = new viewTrang_chinh();
-                    user.Show();
-                    this.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+           
         }
 
             private void mk_enter(object sender, KeyEventArgs e)
@@ -88,6 +61,10 @@ namespace qlsv_dang_nhap.View
             {
                 btnLogin_Click(sender, e);
             }
+        }
+        private void DangNhapThanhCong(Student student)
+        {
+         
         }
     }
 }

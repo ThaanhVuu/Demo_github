@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using qlsv_dang_nhap.userControl;
 
 namespace qlsv_dang_nhap.userControl
 {
@@ -20,6 +21,7 @@ namespace qlsv_dang_nhap.userControl
     /// </summary>
     public partial class hscnn_Control : UserControl
     {
+
         public hscnn_Control()
         {
             InitializeComponent();
